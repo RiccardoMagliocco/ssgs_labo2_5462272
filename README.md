@@ -43,6 +43,17 @@ node index.js 3 "Supercalifragilistico" 5
 node index.js 4 "hello world"
 ```
 
+## Test e Code Coverage
+
+Il progetto integra test unitari tramite [Jest](https://jestjs.io/).  
+I test coprono tutte le funzioni di utilità (`reverseString`, `isPalindrome`, `truncateString`, `countCharacters`) e includono casi normali e casi limite (stringhe vuote, caratteri speciali, lunghezze diverse, ecc).
+
+Per eseguire i test e generare il report di code coverage:
+```sh
+npm test
+```
+La copertura del codice (`code coverage`) è al **100%**.
+
 ## Script disponibili
 
 - `npm start` — Avvia l'applicazione principale (`index.js`)
@@ -52,7 +63,7 @@ node index.js 4 "hello world"
 
 - `index.js`: Entry point CLI
 - `src/stringUtils.js`: Funzioni di utilità sulle stringhe
-- `test/`: Test automatici (se presenti)
+- `test/`: Test automatici
 
 ## Requisiti
 
