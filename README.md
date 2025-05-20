@@ -9,6 +9,24 @@ Labo-String è una Command-Line Interface (CLI) Node.js che offre diverse utilit
 - **Troncamento**: Tronca una stringa a una lunghezza massima, aggiungendo "..." se necessario.
 - **Conteggio caratteri**: Restituisce un oggetto con il conteggio di ogni carattere.
 
+## Integrazione Continua (CI) e Code Coverage
+
+Il progetto utilizza un workflow di **GitHub Actions** (vedi `.github/workflows/ci.yml`) che esegue automaticamente i test e genera il report di code coverage ad ogni push o pull request sul branch `main`.  
+Il report di coverage viene caricato come artefatto scaricabile dalla sezione "Actions" di GitHub.
+
+**Caratteristiche del workflow CI:**
+- Trigger su `push` e `pull_request` verso `main`
+- Un singolo job che:
+  1. Effettua il checkout del repository
+  2. Installa Node.js e le dipendenze
+  3. Esegue i test con coverage (`npm test`)
+  4. Carica la cartella `coverage/` come artefatto
+
+**Come consultare il report di coverage:**
+1. Vai nella tab [Actions](../../actions) del repository su GitHub
+2. Seleziona il workflow eseguito
+3. Scarica l’artefatto `coverage-report` per visualizzare il report HTML
+
 ## Installazione
 
 1. Clona il repository:
